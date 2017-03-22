@@ -29,8 +29,8 @@ public class WindowLogin extends WindowBase implements ActionListener,FocusListe
 	private static final long serialVersionUID = 1L;
 	private JTextField username;
 	private JPasswordField password;
-	private JLabel title;
-	private JButton loginbtn,exitbtn,info;
+	private JLabel title,exitBtn;
+	private JButton loginbtn;
 	
 	
 	
@@ -65,11 +65,17 @@ public class WindowLogin extends WindowBase implements ActionListener,FocusListe
 		
 		//titulo
 		
-		title=new JLabel("TAXI TEC");
-		
+		title=new JLabel("");
+		//title=new JLabel("");
+		//title.setBounds(0, 0, 100, 100);
 		title.setBounds((W/2-150), 0, 350, 100);
 		title.setFont(new Font("Arial", Font.BOLD, 70));
 		//title.setForeground(new Color(0,200,0));
+		
+		//Exit Button
+		exitBtn=new JLabel("HOLA");
+		exitBtn.setIcon(new ImageIcon(getClass().getResource("/resources/exit.png")));
+		exitBtn.setBounds(400, 0, 200, 200);
 		
 		//Username field
 		username=new JTextField("Usuario");
@@ -140,7 +146,7 @@ public class WindowLogin extends WindowBase implements ActionListener,FocusListe
 		mainPanel.add(username);
 		mainPanel.add(password);
 		mainPanel.add(loginbtn);
-		//mainPanel.add(exitbtn);
+		mainPanel.add(exitBtn);
 		this.add(mainPanel);
 	}
 

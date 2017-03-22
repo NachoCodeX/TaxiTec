@@ -48,13 +48,8 @@ public class WindowAdmin extends WindowBase implements ActionListener{
 		mainPanel.setBounds(0, 0, W*2, H+200);
 		
 		
-		//Propietarios
-		//Choferes
-		//Vehiculos
-		//Informacion
-		//Salir
 		String []names={"Propietarios","Choferes","Vehiculos","Informacion","Salir"};
-		String [] path={"person","chofi","car","config","exit"};
+		String [] path={"person","chofi","carr","config","exit"};
 		menu=new JPanel(new GridLayout(1,names.length));
 		
 		menu.setBackground(Color.black);
